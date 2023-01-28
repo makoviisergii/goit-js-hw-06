@@ -23,6 +23,10 @@ button {
   cursor: pointer;
 }
 
+.gallery img {
+width: 300px;
+}
+
 .gallery {
 list-style: none;
 display: grid;

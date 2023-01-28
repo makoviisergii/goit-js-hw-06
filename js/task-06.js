@@ -3,9 +3,11 @@ const textInput = document.querySelector("#validation-input");
 const textLength = textInput.getAttribute("data-length");
 
 textInput.addEventListener("blur", function (event) {
-  if (event.currentTarget.value.length == textLength) {
-    textInput.classList.add("valid");
+  if (event.currentTarget.value.length != textLength) {
+    textInput.classList.remove("valid");
+    textInput.classList.add("invalid");
     return;
   }
-  textInput.classList.add("invalid");
+  textInput.classList.remove("invalid");
+  textInput.classList.add("valid");
 });
